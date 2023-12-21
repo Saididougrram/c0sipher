@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>c0Sipher | sipher editor</title>
+</head>
+<body>
+    
+    <!--*header-->
+    <header class="wcc">
+        <article class="wc-sb">
+            <div class="left-hed wcc">
+                <div class="bord-lgNm wcc">
+                    <img src="src/img/post3.png" alt="logo">
+                </div>
+                <div class="bord-lgNm wcc">
+                    <h1><span>c0</span>Sipher</h1>
+                </div>
+            </div>
+            <div class="right-hed">
+                <div class="bord-lnSt wcc">
+                    <button>Start Now</button>
+                </div>
+                <div class="bord-lnSt wcc">
+                    <div class="lang wcc">
+                        <div class="lang-bord wcc">
+                            <img src="src/img/sa.png" alt="">
+                        </div>
+                        <div class="lang-bord wcc">
+                            <p>Arabic</p>
+                        </div>
+                        <div class="lang-bord wcc">
+                            <img src="src/img/replace.svg" alt="" style="border-radius: 0px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right2-hed wcc">
+                <img src="src/img/nav.png" alt="" onclick="openNav()">
+            </div>
+        </article>
+    </header>
+    <!--*nav-->
+    <div class="back-nav" id="backNav" onclick="closeNav()"></div>
+    <nav id="navBar" class="w-fs-c">
+        <article class="w-fs-c">
+            <div class="top-nav wc-sb">
+                <div class="dev-top-nav wcc">
+                    <p>menu</p>
+                </div>
+                <div class="dev-top-nav wcc">
+                    <img src="src/img/nav2.png" alt="" onclick="closeNav()">
+                </div>
+            </div>
+            <div class="body-nav wcc">
+                <div class="dev-body-nav" style="position: relative;">
+                    <div class="lang-nav wc-sb" onclick="moreLangNav()">
+                        <div class="nm-lang-nav wcc">
+                            <img src="src/img/sa.png" alt="">
+                        </div>
+                        <div class="nm-lang-nav">
+                            <h3>Arabic</h3>
+                        </div>
+                        <div class="arrow-lang-nav wcc">
+                            <img src="src/img/replaceb.svg" alt="" style="border-radius: 0px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </nav>
+    <script>
+        const $__navBar = document.getElementById('navBar');//& استدعاء الشءيط الجانبي و تخزينه في المتغير $__navBar
+        const $__backNav = document.getElementById('backNav');//& استدعاء الشاشة الخلفية لشريط الجانبي و تخزينه في المتغير $__backNav
+        //& الشاشة الخلفية هي اطار يطهر خلف الشريط الجانبي و هة اطار شفاف و ضيفته هي فصل محتوى الصفحة عن الإطار الجانبي حيث عند الضغط في مكان ما خارج الشريط الجانبي يتم اخفائه
+
+
+        //& اوامر اضهار الشريط الجانبي من جهة اليمين
+        //& الدالة openNav() مرفقة مع عنصر الصورة (html 44)
+        function openNav(){
+            $__navBar.style.marginRight = "0px";
+            $__backNav.style.width = "100%";
+        }
+        //& اوامر اخفاء الشريط الجانبي من جهة اليمين
+        //& الدالة closeNav() مرفقة بالشاشة الخلفية لشريط الجانبي (html 49) و عنصر الصورة (html 57)
+        function closeNav(){
+            $__navBar.style.marginRight = "-222px";
+            $__backNav.style.width = "0%";
+        }
+    </script>
+    <!--*intro-->
+    <section class="intro">
+        <article class="intro-box wcc">
+            <div class="hi">
+                <h1><span>#\</span>F5UUH6D79UG5<span>/#</span></h1>
+            </div>
+            <div class="hi">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam natus voluptates recusandae ratione provident suscipit laborum molestias a laboriosam enim!</p>
+            </div>
+            <div class="hi">
+                <button>Get Started</button>
+            </div>
+        </article>
+    </section>
+    <!--*marquee-->
+    <section style="margin-top: 0px;">
+        <article>
+            <marquee>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ad reprehenderit harum magnam veniam dignissimos facilis, velit nostrum asperiores quisquam. Rerum suscipit quisquam alias accusantium a fugiat culpa amet distinctio.</p>
+            </marquee>
+        </article>
+    </section>
+    <!--*content-->
+    <section>
+        <article class="sipher-box wcc">
+            <div class="top-control wc-fe">
+                <div class="bord-control">
+                    <div class="siphers wcc">
+                        <div class="bord-sipher wcc">
+                            <p>deffult</p>
+                        </div>
+                        <div class="bord-sipher wcc">
+                            <img src="src/img/caret-down.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="bord-control">
+                    <div class="add-S wcc">
+                        <div class="bord-add wcc">
+                            <p>new sipher</p>
+                        </div>
+                        <div class="bord-add wcc">
+                            <img src="src/img/add.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="body-control">
+                <div class="text-sipher">
+                    <textarea placeholder="normal text" id="normal_text" style="border: 4px solid var(--color);"></textarea>
+                </div>
+                <div class="change wcc">
+                    <div class="div-change wcc">
+                        <img src="src/img/shuffle.svg" alt="">
+                    </div>
+                </div>
+                <div class="text-sipher">
+                    <textarea placeholder="sipher text" id="sipher_text" value="" disabled></textarea>
+                </div>
+            </div>
+        </article>
+    </section>
+    <!--*use-->
+    <section>
+        <article class="use-box">
+            <div class="use-bord">
+                <div class="top-use">
+                    <div class="bord-use wcc">
+                        <div class="img-use wcc">
+                            <img src="src/img/messages.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="bord-use wc-fs">
+                        <p>Contact</p>
+                    </div>
+                </div>
+                <div class="body-use">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nesciunt praesentium accusamus explicabo neque nulla ipsam libero delectus optio suscipit.</p>
+                </div>
+            </div>
+            <div class="use-bord">
+                <div class="top-use">
+                    <div class="bord-use wcc">
+                        <div class="img-use wcc">
+                            <img src="src/img/blog-text.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="bord-use wc-fs">
+                        <p>Blogging</p>
+                    </div>
+                </div>
+                <div class="body-use">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nesciunt praesentium accusamus explicabo neque nulla ipsam libero delectus optio suscipit.</p>
+                </div>
+            </div>
+            <div class="use-bord">
+                <div class="top-use">
+                    <div class="bord-use wcc">
+                        <div class="img-use wcc">
+                            <img src="src/img/circle-ellipsis.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="bord-use wc-fs">
+                        <p>Others</p>
+                    </div>
+                </div>
+                <div class="body-use">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nesciunt praesentium accusamus explicabo neque nulla ipsam libero delectus optio suscipit.</p>
+                </div>
+            </div>
+        </article>
+    </section>
+    <!--*about-->
+    <section>
+        <article class="about">
+            <div class="top-about">
+                <h1>About Website</h1>
+            </div>
+            <div class="body-about">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo ex voluptatum nesciunt, voluptatem, a delectus accusamus quod consequuntur eum aspernatur libero dolore earum sed autem. Harum perspiciatis ipsum laborum neque laboriosam minima perferendis maxime eveniet aliquam nesciunt, repudiandae nulla dignissimos fuga corrupti exercitationem adipisci fugit! Neque, minima, natus qui quaerat tempore debitis reiciendis ea, ex ducimus iure ipsam corrupti distinctio.</p>
+            </div>
+        </article>
+    </section>
+    <!--*social media-->
+    <section>
+        <article class="media">
+            <div class="bord-media">
+                <div class="media-div wcc">
+                    <img src="src/img/facebook.svg" alt="">
+                </div>
+                <div class="media-div wc-fs nm-media nm-media">
+                    <h3>Facebook</h3>
+                </div>
+            </div>
+            <div class="bord-media" style="background-color: #ff4ea6;">
+                <div class="media-div wcc">
+                    <img src="src/img/instagram.svg" alt="">
+                </div>
+                <div class="media-div wc-fs nm-media">
+                    <h3>Instagram</h3>
+                </div>
+            </div>
+            <div class="bord-media" style="background-color: #4ea9ff;">
+                <div class="media-div wcc">
+                    <img src="src/img/twitter.svg" alt="">
+                </div>
+                <div class="media-div wc-fs nm-media">
+                    <h3>Twitter</h3>
+                </div>
+            </div>
+            <div class="bord-media" style="background-color: #4e69ff;">
+                <div class="media-div wcc">
+                    <img src="src/img/telegram.svg" alt="">
+                </div>
+                <div class="media-div wc-fs nm-media">
+                    <h3>Teligram</h3>
+                </div>
+            </div>
+        </article>
+    </section>
+    <!--*footer-->
+    <footer>
+        <article class="foot wcc">
+            <button>CopyRight - 2024</button>
+        </article>
+    </footer>
+    <!--*javascript-->
+    <script src="src/js/sipher.js"></script>
+
+</body>
+</html>
